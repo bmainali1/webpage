@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+   background-image: url(./Image/Background.avif);
+    font-family: 'Dosis', sans-serif;
+   
+}
+
+.container{
+    margin: 20px 40px;
+    color: white;
+}
+.heading{
+    font-size: 60px;
+    color: white;
+}
+.heading span{
+    font-size: 30px;
+    font-style: italic;
+    color: #ff0505;
+}
+
+.profiles{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+}
+
+.profile{
+    flex-basis: 260px;
+}
+
+.profile .profile-img{
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    filter: grayscale(60%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.profile:hover .profile-img{
+    filter: grayscale(0);
+}
+
+.user-name{
+    margin-top: 30px;
+    font-size: 35px;
+}
+
+.profile h5{
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #ccc;
+}
+
+.profile p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+    color: #fbfbfb;
+}
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgb(255, 0, 10); /* Green glow, adjust color and opacity as needed */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 10);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 10);
+    }
+  }
+  
+  .profile-img {
+    animation: glow 10s infinite; /* Adjust animation duration as needed */
+  }
+  .scrollbar{
+    width: 300px;
+    height: 264px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding:1px;
+    margin-top: 5px;
+    
+    
+  }
+  div::-webkit-scrollbar{
+    display: none;
+  }
+  @keyframes moveGlow {
+    0% {
+        box-shadow: 0 0 5px #f40202b3;
+    }
+    25% {
+        box-shadow: 20px 0 20px #f40202b3;
+    }
+    50% {
+        box-shadow: 0 20px 20px #f40202b3;
+    }
+    75% {
+        box-shadow: -20px 0 20px #f40202b3;
+    }
+    100% {
+        box-shadow: 0 -20px 20px #f40202b3;
+    }
+}
+
+.glow-border {
+    border: 2px solid #f40202b3; /* Green border color */
+    padding: 20px; /* Add padding for better visibility */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    animation: moveGlow 5s infinite linear; /* Apply the moveGlow animation */
+    
+}
+ 
